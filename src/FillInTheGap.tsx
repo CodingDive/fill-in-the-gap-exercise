@@ -71,7 +71,6 @@ const withGaps = <T extends CustomEditor>(
     deleteBackward(unit);
     const [fillInTheGap] = Editor.nodes(editor, {
       match: (node) => {
-        console.log("Match called with node: ", { node });
         return SlateElement.isElement(node) && node.type === "fill-in-the-gap";
       },
     });
